@@ -1,3 +1,76 @@
 @charset "utf-8";
 
-#top {}
+#top .tabbar {
+  height: 40px;
+  /* line-height 会被继承 */
+  line-height: 40px; 
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+}
+
+#top .category {
+  float: left;
+  width: 164px;
+  /* text-align: center; */
+  background: linear-gradient(90deg,red,#ff3264);
+}
+
+#top .category .icon {
+  display: inline-block;
+  width: 15px;
+  height: 12px;
+  margin: 0 24px 0 15px;
+}
+
+#top .category .icon i{
+  display: block;
+  width: 15px;
+  height: 2px;
+  background-color: #fff;
+}
+
+#top .category .icon i:nth-child(2) {
+  margin: 3px 0;
+}
+
+#top .category span {
+  font-size: 14px;
+  color: #fff
+}
+
+#top .tabbar .list{
+  float: left;
+  padding-left: 25px;
+}
+
+#top .tabbar .list li {
+  float: left;
+}
+
+#top .tabbar .list li a {
+  display: inline-block;
+  padding: 0 20px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #333
+}
+
+#top .tabbar .list li .active {
+  color: #ff1e32;
+}
+
+#top .tabbar .list li a:hover {
+  color: #ff1e32;
+}
+
+/* 轮播图相关样式 */
+#top .banner {
+  clear: both;
+  overflow: hidden;
+}
+
+#top .banner a img {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+}

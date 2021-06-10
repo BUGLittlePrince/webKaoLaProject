@@ -125,10 +125,12 @@
 }
 
 /* logo-search-cart */
+#header .operate {
+  background-color: #fff;
+}
 #header .operation {
   position: relative;
   height: 100px;
-  /* background-color: tomato; */
 }
 
 #header .operation img {
