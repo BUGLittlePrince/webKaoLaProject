@@ -48,17 +48,33 @@
 }
 
 #top .category .menu-list li {
-  cursor: pointer;
-  text-align: left;
   padding: 0 3px;
-  height: 42px;
   background: linear-gradient(90deg,red,#ff3264);
 }
 
 #top .category .menu-list li a {
+  position: relative;
+  cursor: pointer;
+  text-align: left;
   display: block;
   padding-left: 10px;
   border-bottom: 1px solid #ff5160;
+  height: 42px;
+}
+
+#top .category .menu-list li a span {
+  line-height: 42px;
+}
+
+#top .category .menu-list li a i {
+  position: absolute;
+  top: 17px;
+  right: 15px;
+  width: 8px;
+  height: 8px;
+  border-top: 1px solid #ff96ad;
+  border-right: 1px solid #ff96ad;
+  transform: rotate(45deg);
 }
 
 #top .category .menu-list li .active {
@@ -116,15 +132,96 @@
 
 /* 轮播图相关样式 */
 #top .banner {
-  content: '';
-  clear: both;
+  position: relative;
   overflow: hidden;
   min-width: 1100px;
 }
 
-#top .banner .swiper img {
+#top .banner .swiper {
+  display: inline-block;
   position: relative;
   transform: translate(-50%, 0);
   left: 50%;
-  height: 547px;
+}
+
+#top .banner .swiper img {
+  height: 560px;
+  /* z-index: -9; */
+}
+
+#top .banner .swiper .control {
+  display: none;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 40%;
+  height: 68px;
+}
+
+#top .banner .swiper:hover .control {
+  display: block;
+}
+
+#top .banner .swiper .control i {
+  width: 34px;
+  height: 68px;
+  background-image: url("../img/script.png");
+}
+
+#top .banner .swiper .control .prev {
+  float: left;
+  margin-left: 166px;
+  background-position: -625px -68px;
+}
+
+#top .banner .swiper .control .next {
+  float: right;
+  background-position: -670px -67px;
+}
+
+/* 毛玻璃效果，轮播图下面的相关服务 */
+#top .banner .service {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 45px;
+  overflow: hidden;
+}
+
+#top .banner .service .blur {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url('../img/banner.jpeg') center bottom;
+  filter: blur(8px);
+}
+
+#top .banner .service ul {
+  position: relative;
+  float: left;
+  z-index: 1;
+}
+
+#top .banner .service ul li {
+  float: left;
+  margin-right: 40px;
+}
+
+#top .banner .service span {
+  display: inline-block;
+  height: 45px;
+  line-height: 45px;
+  font-size: 12px;
+  color: #fff
+}
+
+#top .banner .service .wrap .prompt {
+  float: right; 
+}
+
+#top .banner .service .wrap .prompt img {
+  margin-top: -2px;
 }
