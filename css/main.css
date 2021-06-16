@@ -1,0 +1,203 @@
+@charset "utf-8";
+
+#main {
+  margin-top: 40px;
+}
+
+#main .brands .title {
+  position: relative;
+  height: 74px;
+  padding-top: 25px;
+  border-top: 1px solid #e9e9e9;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #999;
+  zoom: 1;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+#main .brands .title .big {
+  margin-right: 10px;
+  font-size: 22px;
+  color: #333;
+  font-weight: bold;
+}
+
+#main .brands .title .change {
+  display: inline-block;
+  position: absolute;
+  top: 26px;
+  right: 4px;
+  font-size: 14px;
+  color: #999;
+}
+
+#main .brands .title .change b {
+  display: inline-block;
+  margin-left: 4px;
+  vertical-align: -2px;
+  width: 20px;
+  height: 20px;
+  line-height: 18px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+#main .brands .title .change b::before {
+  content: "";
+}
+
+#main .brands .brand .left {
+  float: left;
+  width: 219px;
+  height: 353px;
+  border-right: 1px solid #e9e9e9;
+  background-color: #333;
+}
+
+#main .brands .brand .left a {
+  display: block;
+}
+
+#main .brands .brand .left a img {
+  width: 219px;
+  height: 219px;
+}
+
+#main .brands .brand .left .progress {
+  width: 33%;
+  height: 3px;
+  background-color: #ff1e32;
+}
+
+#main .brands .brand .left .txt {
+  position: relative;
+  height: 136px;
+  color: #fff;
+  z-index: 12;
+  opacity: .8;
+}
+
+#main .brands .brand .left .txt .name, 
+#main .brands .brand .left .txt .desc {
+  margin: 0 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+}
+
+#main .brands .brand .left .txt .name {
+  padding-top: 41px;
+  padding-bottom: 4px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+#main .brands .brand .left .txt .desc {
+  font-size: 12px;
+}
+
+#main .brands .brand .right {
+  float: left;
+  width: 880px;
+  border-top: 1px solid #e9e9e9;
+}
+
+#main .brands .brand .right li {
+  position: relative;
+  float: left;
+  width: 219px;
+  height: 176px;
+  border-right: 1px solid #e9e9e9;
+  border-bottom: 1px solid #e9e9e9;
+  text-align: center;
+  background-color: #fff;
+}
+
+#main .brands .brand .right li img {
+  display: block;
+  margin: 12px auto 0;
+  width: 120px;
+  height: 120px;
+  transform-origin: center 0;
+  transition: transform .2s ease-in;
+}
+#main .brands .brand .right li .list-desc {
+  display: block;
+  margin: 10px -90px 0;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+  transition: opacity .2s ease-in;
+}
+
+#main .brands .brand .right li:hover .active{
+  /* display: block; */
+  opacity: 1;
+}
+
+#main .brands .brand .right li:hover .list-desc {
+  /* display: none; */
+  opacity: 0;
+}
+
+#main .brands .brand .right li:hover img {
+  transform: scale(.66);
+}
+
+#main .brands .brand .right li .active {
+  /* 隐藏元素的三种方式：
+  1、display: none
+  2、visibility: hidden
+  3、opacity: 0 */
+
+  /* display: none; */
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  transition: opacity .2s ease-in;
+}
+
+#main .brands .brand .right li .active .follow{
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 52px;
+  height: 20px;
+  line-height: 20px;
+  color: #999;
+  border: 1px solid #999;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+#main .brands .brand .right li .active .follows{
+  margin: 99px 0 8px; 
+  color: #999;
+}
+
+#main .brands .brand .right li .active .enter{
+  display: block;
+  margin: 0 auto;
+  width: 76px;
+  height: 32px;
+  line-height: 32px;
+  color: #ff1e3c;
+  background-color: #fff;
+  text-decoration: none;
+  border-radius: 32px;
+  border: 2px solid #ff1e3c;
+  font-size: 14px;
+}

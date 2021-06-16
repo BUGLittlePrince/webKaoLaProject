@@ -168,15 +168,54 @@
   background-image: url("../img/script.png");
 }
 
-#top .banner .swiper .control .prev {
+#top .banner .swiper .control i.prev {
   float: left;
   margin-left: 166px;
   background-position: -625px -68px;
 }
 
-#top .banner .swiper .control .next {
+#top .banner .swiper .control i.next {
   float: right;
   background-position: -670px -67px;
+}
+
+#top .banner .swiper .control i:hover.prev {
+  background-position: -625px -153px;
+}
+
+#top .banner .swiper .control i:hover.next {
+  background-position: -670px -153px;
+}
+
+#top .banner .swiper .dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 64px;
+  bottom: 60px;
+}
+
+#top .banner .swiper .dots .dot {
+  position: absolute;
+  bottom: 22px;
+  left: 210px;
+}
+
+#top .banner .swiper .dots .dot i {
+  float: left;
+  margin-right: 10px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+#top .banner .swiper .dots .dot i:hover {
+  background-color: #ff1e32;
+}
+
+#top .banner .swiper .dots .dot i.active {
+  background-color: #ff1e32;
 }
 
 /* 毛玻璃效果，轮播图下面的相关服务 */
@@ -202,7 +241,6 @@
 #top .banner .service ul {
   position: relative;
   float: left;
-  z-index: 1;
 }
 
 #top .banner .service ul li {
@@ -219,6 +257,7 @@
 }
 
 #top .banner .service .wrap .prompt {
+  position: relative;
   float: right; 
 }
 
